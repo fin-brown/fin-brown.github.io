@@ -1,4 +1,6 @@
-body { margin: 60px auto; width: 70%; }
+body { margin: 60px auto; height: 100%; }
+
+.bg { background-image: 'images/joy_division_england_topography.gif'; height: 100%; background-position: center; background-repeat: no-repeat; background-size: cover;}
 
 a { text-decoration: none; color: #999; }
 a:hover { text-decoration: underline; }
