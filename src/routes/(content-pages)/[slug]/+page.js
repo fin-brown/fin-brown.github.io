@@ -1,5 +1,7 @@
 // Get posts info
-const allPosts = import.meta.glob('../../../lib/posts/*.md', { eager: true });
+const allPosts = import.meta.glob('$lib/posts/*.md', { eager: true });
+
+console.log("point 1");
 
 let posts = [];
 // Get the posts' slugs

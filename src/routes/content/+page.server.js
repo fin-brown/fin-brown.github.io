@@ -1,3 +1,5 @@
+console.log("point 6");
+
 import { error } from '@sveltejs/kit';
 import posts from '$lib/posts';
 
@@ -9,8 +11,7 @@ export async function load() {
 			title,
 			date,
 			excerpt,
-			tags,
-			readingTime
+			tags
 		};
 	});
 
