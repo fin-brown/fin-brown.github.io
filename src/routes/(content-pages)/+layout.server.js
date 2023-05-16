@@ -1,6 +1,7 @@
 import { error } from '@sveltejs/kit';
 import posts from '$lib/posts';
 
+/** @type {import('./$types').LayoutServerLoad} */
 export async function load({ params }) {
 	const post = posts.find((x) => x.slug === params.slug);
 

@@ -1,6 +1,6 @@
 <script>
 	import About from '$lib/components/About.svelte';
-	console.log("point 4");
+	import AboutDev from '../lib/components/AboutDev.svelte';
 </script>
 
 <svelte:head>
@@ -8,7 +8,8 @@
 	<meta name="description" content="Hello" />
 </svelte:head>
 
-<body>
+<!-- put this on top with "relative z-[-1]" -->
+<body class="">
 	<section>
 		<div class="flex w-screen h-56 bg-gradient-to-t from-theme1 to-white"></div>
 		<div class="flex flex-wrap px-10 pb-5 bg-theme1">
@@ -17,6 +18,8 @@
 			</picture>
 		</div>
 	</section>
+
+	<div><AboutDev /></div>
 
 	<section>
 		<div class="flex flex-wrap mx-20 mt-20 mb-60">

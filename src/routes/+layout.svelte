@@ -1,18 +1,15 @@
 <script>
-	import Header from '$lib/components/Header.svelte';
+	import StickyHeader from '../lib/components/StickyHeader.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import '../app.css';
 </script>
 
 <div class="flex flex-col min-h-screen">
-	<Header />
+	<StickyHeader class="relative z-20"/>
 
-	<main class="flex flex-col p-0 m-0 w-full max-width-5xl box-border">
+	<main class="relative z-0 flex flex-col p-0 m-0 w-full max-width-5xl box-border">
 		<slot />
 	</main>
 
-	<Footer />
+	<Footer class="relative z-10"/>
 </div>
-
-<style>
-</style>

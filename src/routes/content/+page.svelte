@@ -4,17 +4,21 @@
 </svelte:head>
 
 <script>
-	console.log("point 3");
+    import ImageCard from '$lib/components/ImageCard.svelte';
+    import TextOnlyCard from '../../lib/components/TextOnlyCard.svelte';
+
+	/** @type {import('./$types').PageData} */
 	export let data;
-	let { posts } = data;
 </script>
 
 <body>
-<h1> heloo</h1>
-<p> hi</p>
-	<!--- 
-	{#each posts as post}
-	<BlogPostCard {post} />
-	{/each}
-	-->
+	<div class="flex flex-wrap items-start m-2">
+		{#each data.posts as post}
+			{#if post.image}
+				<ImageCard {post} />
+			{:else}
+				<TextOnlyCard {post} />
+			{/if}
+		{/each}
+	</div>
 </body>

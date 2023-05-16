@@ -1,8 +1,6 @@
 // Get posts info
 const allPosts = import.meta.glob('$lib/posts/*.md', { eager: true });
 
-console.log("point 1");
-
 let posts = [];
 // Get the posts' slugs
 for (let path in allPosts) {
@@ -12,6 +10,7 @@ for (let path in allPosts) {
 	posts.push(p);
 }
 
+/** @type {import('./$types').PageLoad} */
 export function load({ params }) {
 	const { slug } = params;
 
@@ -19,7 +18,7 @@ export function load({ params }) {
 	const filteredPost = posts.find((p) => {
 		return p.slug.toLowerCase() === slug.toLowerCase();
 	});
-
+	
 	return {
 		// Tell page to load that post's module
 		page: filteredPost.post.default

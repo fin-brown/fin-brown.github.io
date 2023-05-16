@@ -1,11 +1,13 @@
 <script>
-	console.log("point 2.1");
-	// Declare the page variable to use on the client
-	export let page;
-	$: ({ page } = data);
+    import { dataset_dev } from 'svelte/internal';
 
-	console.log("point 2.2");
+	// Declare the page variable to use on the client
+	/** @type {import('./$types').PageData} */
+	/*export let page;*/
+	/*$: ({ page } = data);*/
+	export let data;
+	let { page } = data;
 </script>
 
 <!-- Here we'll load the component of the blog post page itself -->
-<svelte:component this={page} />
+<svelte:component this={page} /> 
